@@ -1,0 +1,404 @@
+//*** Table of Contents //
+// 1) Fonts
+// 2) Mixins
+// 3) Variables
+// 4) Setup
+// 5) Base Styles
+// 6) Header
+// 7) Login Fields
+// 8) About 
+// 9) Search
+// 10) Search Results
+// 11) Help
+// 12) 
+// 13) 
+
+
+//  **** Fonts **** //
+@import 'fonts';
+@mixin regular {
+  font-family: 'proxima_nova_rgregular', sans-serif;
+}
+@mixin semiBold {
+  font-family: "proxima_novasemibold", sans-serif;
+}
+
+// **** Mixins **** //
+@mixin image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+// **** Variables **** //
+$gray: #d7d7d7;
+$medium-gray: #bbbbbb;
+$dark-gray: #797979;
+$light-gray: #f1f1f1;
+$blue: #0033AE;
+$green: #2F6120;
+
+
+// **** Setup **** //
+
+// Box Model Hack 
+* {
+ -moz-box-sizing: border-box; /* Firexfox */
+ -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+ box-sizing: border-box; /* IE */
+}
+
+// Clear fix hack 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right; 
+  padding: 0 0 10px 10px;
+}
+
+.alignleft {
+  float: left; 
+  padding: 0 10px 10px 0;
+}
+
+
+// ****  BASE STYLES ****//
+body, h1, h2, h3, h4 {
+  font-family: 'proxima_nova_rgregular', sans-serif;
+}
+
+body {
+  font-size: 100%;
+  width: 100%;
+  line-height: 1.4;
+}
+
+a {
+  color: $blue;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  line-height: 2.2;
+}
+
+input[type="text"], input[type="password"] {
+  @include regular;
+  letter-spacing: .5px;
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 8px;
+}
+
+input[type="submit"], input[type="button"] {
+  @include semiBold;
+  display: block;
+  padding: 8px 10px;
+  box-shadow: none;
+  background-color: $gray;
+  border: 1px solid $dark-gray;
+  max-width: 125px;
+  margin: auto;
+  float: inherit;
+  &:hover {
+    background-color: $medium-gray;
+  }
+}
+
+nav {
+  ul {
+    float: right;
+    margin-right: 30px;
+    li{
+      float: left;
+      display: block;
+      padding: 10px 10px 0 10px;
+      a {
+        text-decoration: none;
+        color: $dark-gray;
+        text-transform: uppercase;
+        font-size: 15px;
+        &:hover {
+          text-decoration: underline;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+// ****  HEADER ****//
+
+div.header {
+  margin-top: 50px; 
+  img.logo {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+}
+
+// ****  LOGIN FIELDS ****//
+.login {
+  margin-top: 50px;
+  .username, .password {
+    margin-bottom: 20px;
+  }
+  .submitLogin {
+    .helperText {
+      font-size: 12px; 
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+// ****  ABOUT SECTION ****//
+.aboutSection {
+  margin-top: 50px;
+}
+
+// **** SEARCH **** //
+.search {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#advancedSearchOption{
+  a {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+#advancedSearch, #newAdvancedSearch,  {
+  background-color: $light-gray;
+  border: 1px solid $dark-gray;
+  padding: 20px;
+  display: none;
+  .agencySearch, .boroughSearch, .locationKeywordsSearch, .zipCodeSearch {
+    margin-top: 20px;
+  }
+  .heading {
+    @include semiBold;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .inputType {
+    font-size: 18px;
+    text-align: left;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  label {
+    float: left;
+  }
+  input[type="text"] {
+    margin-bottom: 20px;
+  }
+  .smallText {
+    font-size: 14px;
+  }
+  .dateSearch {
+    .calendarIcon {
+      width: 35px;
+      margin-top: 2px;
+    }
+  }
+  .agencySearch {
+    select {
+
+    }
+  }
+  .boroughSearch {
+    .checkboxes {
+      margin-top: 12px;
+    }
+    label {
+      display: block;
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+    input[type="checkbox"] {
+      display: block;
+      float: left;
+      margin-top: 3px;
+      margin-right: 10px;
+    }
+  }
+  .applyFilter {
+    float: right;
+  }
+  .cancelFilter {
+    margin-left: 60px;
+  }
+}//#advancedSearch
+
+//datepicker
+#ui-datepicker-div {
+  width: 312px;
+}
+
+// dialog
+#dialog {
+  @include regular;
+  iframe {
+    width: 100%;
+    min-height: 625px;
+  }
+}
+.ui-widget-overlay { 
+      background: $dark-gray !important;
+      opacity: 0.3 !important;
+}
+
+.ui-dialog {
+    height: 92% !important;
+    width: 95% !important;
+    top: 30px !important;
+    left: 35px !important;
+}
+
+// **** SEARCH RESULTS**** //
+.searchResultsHeader {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+  .logo {
+    margin-top: 4px;
+    margin-left: 20px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  input[type="text"] {
+    font-size: 15px;
+    width: 92.7%;
+    float: left;
+  }
+  input[type="submit"], input[type="button"] {
+    @include image-replacement;
+    text-indent: 170%;
+    width: 40px;
+    height: 37px;
+    padding: 10px;
+    background: url('../images/search.png') no-repeat;
+    background-size: 20px;
+    background-position: 8px;
+    border: 1px solid $gray;
+    background-color: $gray;
+    &:hover {
+      background-color: $medium-gray;
+    }
+  }
+  #advancedSearchOption {
+    &.newAdvancedSearchOption {
+      a {
+        margin-top: 10px;  
+        color: $blue;
+        text-decoration: underline;
+        text-align: left;
+        font-size: 13px;
+      }
+    }
+  }
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 0 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}//.searchResultsHeader
+
+#advancedSearch {
+  &.newAdvancedSearch {
+    .heading {
+      margin-left: 22px;
+    }
+    .cancelFilter {
+      margin-left: 138px;
+    }  
+  }
+}
+
+.grayLine {
+  background-color: $gray;
+  height: 1px;
+}
+
+.searchResults {
+  .resultCount {
+    color: $medium-gray;
+  }
+  .result {
+    padding-bottom: 20px;
+    a.resultTitle {
+      margin: 0;
+      color: $blue;
+      text-decoration: none;
+      font-size: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    a.resultLink { 
+      margin: 0;
+      color: $green;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    p {
+      margin-top: 2px;
+      font-size: 13px;
+    }
+  }
+}
+
+// **** HELP **** //
+
+#help {
+  h3,  h4, p {
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    color: $dark-gray;
+  }
+}
+
+
+
+
+
+
+

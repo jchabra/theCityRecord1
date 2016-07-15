@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>The City Record Prototype</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <!--[if (gt IE 8) | (IEMobile)]><!-->
+  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css" />
+  <!--<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+  <link rel="stylesheet" href="./assets/stylesheets/ie.css" />
+  <![endif]-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <nav class="grid-100 mobile-grid-100">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+    <div class="grid-container">
+      <!-- ******** Header******** -->
+      <div class="grid-100 mobile-grid-100 header">
+        <img class="logo" src="images/logo.png" alt="The City Record Logo">
+      </div><!--//.grid-100 -->
+      <!-- ******** End of Header ******** -->
+      <!-- ******** Login Fields ******** -->
+      <div class="grid-30 hide-on-mobile">&nbsp;</div>
+      <div class="grid-40 mobile-grid-100 login">
+        <div class="grid-100 mobile-grid-100 username">
+          <label class="grid-25 mobile-grid-25">Username</label>
+          <input type="text" placeholder="" class="grid-75 mobile-grid-75">
+        </div>
+        <div class="grid-100 mobile-grid-100 password">
+          <label class="grid-25 mobile-grid-25">Password</label>
+          <input type="password" placeholder="" class="grid-75 mobile-grid-75">
+        </div>
+        <div class="grid-100 mobile-grid-100 submitLogin">
+          <div class="grid-25 mobile-grid-25">&nbsp;</div>
+          <input type="submit" value="Login" class="grid-75 mobile-grid-75">
+          <div class="grid-25 mobile-grid-25">&nbsp;</div>
+          <span class="grid-75 mobile-grid-75 helperText"><i>Please login with the username and password <br>provided in the grant document. <br>If you need a username and password please email Jonathan Soffer for futher assistance (<a href="mailto:jonathan.soffer@nyu.edu?Subject=The%20City%20Record:%20Login%20Info" target="_top">jonathan.soffer@nyu.edu</a>).</i></span>
+          </div>
+        </div><!-- //login -->
+        <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        <!-- ******** End of Login Fields ******** -->
+        <div class="clear"></div>
+          <!-- ******** End of Header and Nav ******** -->
+        </div><!--//.grid-container -->
+      </div><!-- //#wrapper -->
+      <script src="javascripts/jquery-2.1.3.min.js"></script>
+    </body>
+    </html>

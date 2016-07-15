@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>The City Record Prototype</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <!--[if (gt IE 8) | (IEMobile)]><!-->
+  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css" />
+  <!--<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+  <link rel="stylesheet" href="./assets/stylesheets/ie.css" />
+  <![endif]-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- ******** Logo and Search Header******** -->
+    <div class="grid-100 mobile-grid-100 searchResultsHeader">
+      <a href="search.html" class="logo grid-20 mobile-grid-100"><img src="images/logo.png" alt="The City Record Logo"></a>
+      <div class="grid-40 mobile-grid-100 newSearch">
+        <input type="text" placeholder="SEARCH">
+        <input type="submit" value="Search">
+      </div><!-- //grid-50 -->
+      <div id="advancedSearchOption" class="grid-10 mobile-grid-100 newAdvancedSearchOption">
+        <a href="#" target="" class="">advanced search</a>
+      </div>
+      <div class="grid-25">
+        <nav class="grid-100 mobile-grid-100">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="help.html">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div><!--//.grid-100 .searchResultsHeader-->
+
+    <div id="advancedSearch" class="grid-100 mobile-grid-100 newAdvancedSearch">
+      <p class="heading">Advanced Search Options</p>
+      <!-- By Date -->
+      <div class="dateSearch">
+        <div class="grid-30 mobile-grid-100">
+          <div class="grid-50 hide-on-mobile">&nbsp;</div>
+          <p class="grid-50 mobile-grid-100 inputType">By Date</p>
+        </div>
+        <div class="grid-40 mobile-grid-90">
+          <div class="grid-100 mobie-grid-100">
+            <label for="from" class="grid-25 mobile-grid-25">From Date</label>
+            <input type="text" name="from" id="from" class="grid-75 mobile-grid-75 fromDate" placeholder="06/24/1873">
+          </div>
+        </div>
+        <div class="grid-30 hide-on-mobile">&nbsp;
+          <!-- <img src="images/calendar_icon.png" alt="Calendar Icon" class="calendarIcon"> -->
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        <div class="grid-40 mobile-grid-90">
+          <div class="grid-100 mobile-grid-100">
+            <label for="to" class="grid-25 mobile-grid-25">To Date</label>
+            <input type="text" name="to" id="to" class="grid-75 mobile-grid-75 toDate" placeholder="03/31/1876">
+          </div>
+        </div>
+        <div class="grid-30 hide-on-mobile">&nbsp;
+         <!--  <img src="images/calendar_icon.png" alt="Calendar Icon" class="calendarIcon"> -->
+       </div>
+
+     </div><!-- //.date -->
+     <div class="clear"></div>
+
+     <!-- By Agency -->
+     <div class="agencySearch">
+      <div class="grid-30 mobile-grid-100">
+        <div class="grid-50 hide-on-mobile">&nbsp;</div>
+        <p class="grid-50 mobile-grid-100 inputType">By Agency</p>
+      </div>
+      <div class="grid-40 mobile-grid-100">
+        <div class="grid-100 mobile-grid-100">
+          <div class="grid-25 mobile-grid-25">&nbsp;</div>
+          <select id="agencyList" class="grid-75 mobile-grid-75"></select>
+          <span class="smallText"><i>press ctrl/cmd to select more than one item</i></span>
+        </div>
+      </div>
+      <div class="grid-30 hide-on-mobile">&nbsp;</div>
+    </div><!-- //.agency -->
+    <div class="clear"></div>
+
+    <!-- Borough -->
+        <!-- <div class="boroughSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">Borough</p>
+          </div>
+          <div class="grid-40 mobile-grid-100 checkboxes"> -->
+            <!-- Manhattan -->
+            <!-- <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Manhattan">
+              <label>Manhattan</label>
+            </div> -->
+            <!-- Brooklyn -->
+           <!--  <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Brooklyn">
+              <label>Brooklyn</label>
+            </div> -->
+            <!-- Queens -->
+           <!--  <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Queens">
+              <label>Queens</label>
+            </div> -->
+            <!-- Bronx -->
+          <!--   <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Bronx">
+              <label>Bronx</label>
+            </div> -->
+            <!-- Staten Island -->
+            <!-- <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Staten Island">
+              <label>Staten Island</label>
+            </div>
+          </div> -->
+          <!-- //.checkboxes -->
+         <!--  <div class="grid-30 hide-on-mobile">&nbsp;</div>
+       </div> -->
+       <!-- //.borough -->
+       <!-- <div class="clear"></div> -->
+
+       <!-- Location Keywords -->
+       <div class="locationKeywordsSearch">
+        <div class="grid-30 mobile-grid-100">
+          <div class="grid-50 hide-on-mobile">&nbsp;</div>
+          <p class="grid-50 mobile-grid-100 inputType">Location Keywords</p>
+        </div>
+        <div class="grid-40 mobile-grid-100">
+          <div class="grid-100 mobile-grid-100">
+            <div class="grid-25 mobile-grid-25">&nbsp;</div>
+            <input type="text" placeholder="ex: Waverly Place" class="grid-75 mobile-grid-75 locationKeywords">
+          </div>
+        </div>
+        <div class="grid-30 hide-on-mobile">&nbsp;</div>
+      </div><!-- //.date -->
+      <div class="clear"></div>
+
+      <!-- Zip Code -->
+<!--         <div class="zipCodeSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">Zip Code</p>
+          </div>
+          <div class="grid-40 mobile-grid-100">
+            <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="text" class="grid-75 mobile-grid-75 zipCode">
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        </div> -->
+        <!-- //.date -->
+        <!-- <div class="clear"></div> -->
+
+        <div class="grid-70 hide-on-mobile">&nbsp;</div>
+        <div class="grid-30 mobile-grid-100">
+          <input type="button" value="Cancel" id="cancelButton" class="grid-50 mobile-grid-50 cancelFilter" style="float: left;">
+          <input type="submit" value="Apply" class="grid-50 mobile-grid-50 applyFilter">
+        </div>
+
+      </div><!-- //#newAdvancedSearch -->
+      <div class="grayLine"></div>
+      <!-- ******** End of Logo and Search Header ******** -->
+      <div class="grid-container searchResults">
+        <!-- ******** Search Results ******** -->
+        <p class="grid-100 mobile-grid-100 resultCount">About 123,456 results</p>
+        <div class="grid-60 mobile-grid-100 result">
+          <div><a href="" id="testModal" class="resultTitle">1. Lorem ipsum dolor sit amet</a></div>
+          <div><a href="" class="resultLink">www.loremipsumdolor.com</a></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+        </div><!-- //.result -->
+
+        <div id="dialog" title="">
+         <div><iframe src="http://cityrecord.magnet.nyu.edu/NYU_14_251_01/reel_8000/PDFs/cityrecord_18730624.pdf"></iframe></div>
+      </div>
+
+      <div class="grid-60 mobile-grid-100 result">
+        <div><a href="" class="resultTitle">2. Lorem ipsum dolor sit amet</a></div>
+        <div><a href="" class="resultLink">www.loremipsumdolor.com</a></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+      </div><!-- //.result -->
+
+      <div class="grid-60 mobile-grid-100 result">
+        <div><a href="" class="resultTitle">3. Lorem ipsum dolor sit amet</a></div>
+        <div><a href="" class="resultLink">www.loremipsumdolor.com</a></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+      </div><!-- //.result -->
+
+      <div class="grid-60 mobile-grid-100 result">
+        <div><a href="" class="resultTitle">4. Lorem ipsum dolor sit amet</a></div>
+        <div><a href="" class="resultLink">www.loremipsumdolor.com</a></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+      </div><!-- //.result -->
+      <!-- ******** End of Search Results ******** -->
+
+    </div><!--//.grid-container -->
+  </div><!-- //#wrapper -->
+  <script src="javascripts/jquery-2.1.3.min.js"></script>
+  <script src="javascripts/external/jquery/jquery.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
+  <script src="javascripts/advancedSearch.js"></script>
+</body>
+</html>

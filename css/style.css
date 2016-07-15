@@ -1,0 +1,428 @@
+@font-face {
+  font-family: 'proxima_novalight_italic';
+  src: url("../fonts/proxima_nova_light_it-webfont.eot");
+  src: url("../fonts/proxima_nova_light_it-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_light_it-webfont.woff") format("woff"), url("../fonts/proxima_nova_light_it-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_light_it-webfont.svg#proxima_novalight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url("../fonts/proxima_nova_light-webfont.eot");
+  src: url("../fonts/proxima_nova_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_light-webfont.woff") format("woff"), url("../fonts/proxima_nova_light-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_light-webfont.svg#proxima_novalight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaregular_italic';
+  src: url("../fonts/proxima_nova_reg_it-webfont.eot");
+  src: url("../fonts/proxima_nova_reg_it-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_reg_it-webfont.woff") format("woff"), url("../fonts/proxima_nova_reg_it-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_reg_it-webfont.svg#proxima_novaregular_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("../fonts/proxima_nova_reg-webfont.eot");
+  src: url("../fonts/proxima_nova_reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_reg-webfont.woff") format("woff"), url("../fonts/proxima_nova_reg-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_reg-webfont.svg#proxima_nova_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold_italic';
+  src: url("../fonts/proxima_nova_sbold_it-webfont.eot");
+  src: url("../fonts/proxima_nova_sbold_it-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_sbold_it-webfont.woff") format("woff"), url("../fonts/proxima_nova_sbold_it-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_sbold_it-webfont.svg#proxima_novasemibold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url("../fonts/proxima_nova_sbold-webfont.eot");
+  src: url("../fonts/proxima_nova_sbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima_nova_sbold-webfont.woff") format("woff"), url("../fonts/proxima_nova_sbold-webfont.ttf") format("truetype"), url("../fonts/proxima_nova_sbold-webfont.svg#proxima_novasemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 46, ../sass/style.scss */
+* {
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
+}
+
+/* line 53, ../sass/style.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 62, ../sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 66, ../sass/style.scss */
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px;
+}
+
+/* line 71, ../sass/style.scss */
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0;
+}
+
+/* line 78, ../sass/style.scss */
+body, h1, h2, h3, h4 {
+  font-family: 'proxima_nova_rgregular', sans-serif;
+}
+
+/* line 82, ../sass/style.scss */
+body {
+  font-size: 100%;
+  width: 100%;
+  line-height: 1.4;
+}
+
+/* line 88, ../sass/style.scss */
+a {
+  color: #0033ae;
+}
+
+/* line 92, ../sass/style.scss */
+label {
+  display: block;
+  font-size: 18px;
+  line-height: 2.2;
+}
+
+/* line 98, ../sass/style.scss */
+input[type="text"], input[type="password"] {
+  font-family: 'proxima_nova_rgregular', sans-serif;
+  letter-spacing: .5px;
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 8px;
+}
+
+/* line 110, ../sass/style.scss */
+input[type="submit"], input[type="button"] {
+  font-family: "proxima_novasemibold", sans-serif;
+  display: block;
+  padding: 8px 10px;
+  box-shadow: none;
+  background-color: #d7d7d7;
+  border: 1px solid #797979;
+  max-width: 125px;
+  margin: auto;
+  float: inherit;
+}
+/* line 120, ../sass/style.scss */
+input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #bbbbbb;
+}
+
+/* line 126, ../sass/style.scss */
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+/* line 129, ../sass/style.scss */
+nav ul li {
+  float: left;
+  display: block;
+  padding: 10px 10px 0 10px;
+}
+/* line 133, ../sass/style.scss */
+nav ul li a {
+  text-decoration: none;
+  color: #797979;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+/* line 138, ../sass/style.scss */
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #797979;
+}
+
+/* line 149, ../sass/style.scss */
+div.header {
+  margin-top: 50px;
+}
+/* line 151, ../sass/style.scss */
+div.header img.logo {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+
+/* line 159, ../sass/style.scss */
+.login {
+  margin-top: 50px;
+}
+/* line 161, ../sass/style.scss */
+.login .username, .login .password {
+  margin-bottom: 20px;
+}
+/* line 165, ../sass/style.scss */
+.login .submitLogin .helperText {
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* line 174, ../sass/style.scss */
+.aboutSection {
+  margin-top: 50px;
+}
+
+/* line 179, ../sass/style.scss */
+.search {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* line 185, ../sass/style.scss */
+#advancedSearchOption a {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* line 193, ../sass/style.scss */
+#advancedSearch, #newAdvancedSearch {
+  background-color: #f1f1f1;
+  border: 1px solid #797979;
+  padding: 20px;
+  display: none;
+}
+/* line 198, ../sass/style.scss */
+#advancedSearch .agencySearch, #advancedSearch .boroughSearch, #advancedSearch .locationKeywordsSearch, #advancedSearch .zipCodeSearch, #newAdvancedSearch .agencySearch, #newAdvancedSearch .boroughSearch, #newAdvancedSearch .locationKeywordsSearch, #newAdvancedSearch .zipCodeSearch {
+  margin-top: 20px;
+}
+/* line 201, ../sass/style.scss */
+#advancedSearch .heading, #newAdvancedSearch .heading {
+  font-family: "proxima_novasemibold", sans-serif;
+  margin-top: 0;
+  font-size: 20px;
+}
+/* line 206, ../sass/style.scss */
+#advancedSearch .inputType, #newAdvancedSearch .inputType {
+  font-size: 18px;
+  text-align: left;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+/* line 212, ../sass/style.scss */
+#advancedSearch label, #newAdvancedSearch label {
+  float: left;
+}
+/* line 215, ../sass/style.scss */
+#advancedSearch input[type="text"], #newAdvancedSearch input[type="text"] {
+  margin-bottom: 20px;
+}
+/* line 218, ../sass/style.scss */
+#advancedSearch .smallText, #newAdvancedSearch .smallText {
+  font-size: 14px;
+}
+/* line 222, ../sass/style.scss */
+#advancedSearch .dateSearch .calendarIcon, #newAdvancedSearch .dateSearch .calendarIcon {
+  width: 35px;
+  margin-top: 2px;
+}
+/* line 233, ../sass/style.scss */
+#advancedSearch .boroughSearch .checkboxes, #newAdvancedSearch .boroughSearch .checkboxes {
+  margin-top: 12px;
+}
+/* line 236, ../sass/style.scss */
+#advancedSearch .boroughSearch label, #newAdvancedSearch .boroughSearch label {
+  display: block;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+/* line 241, ../sass/style.scss */
+#advancedSearch .boroughSearch input[type="checkbox"], #newAdvancedSearch .boroughSearch input[type="checkbox"] {
+  display: block;
+  float: left;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+/* line 248, ../sass/style.scss */
+#advancedSearch .applyFilter, #newAdvancedSearch .applyFilter {
+  float: right;
+}
+/* line 251, ../sass/style.scss */
+#advancedSearch .cancelFilter, #newAdvancedSearch .cancelFilter {
+  margin-left: 60px;
+}
+
+/* line 257, ../sass/style.scss */
+#ui-datepicker-div {
+  width: 312px;
+}
+
+/* line 262, ../sass/style.scss */
+#dialog {
+  font-family: 'proxima_nova_rgregular', sans-serif;
+}
+/* line 264, ../sass/style.scss */
+#dialog iframe {
+  width: 100%;
+  min-height: 625px;
+}
+
+/* line 269, ../sass/style.scss */
+.ui-widget-overlay {
+  background: #797979 !important;
+  opacity: 0.3 !important;
+}
+
+/* line 274, ../sass/style.scss */
+.ui-dialog {
+  height: 92% !important;
+  width: 95% !important;
+  top: 30px !important;
+  left: 35px !important;
+}
+
+/* line 282, ../sass/style.scss */
+.searchResultsHeader {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+}
+/* line 286, ../sass/style.scss */
+.searchResultsHeader .logo {
+  margin-top: 4px;
+  margin-left: 20px;
+}
+/* line 289, ../sass/style.scss */
+.searchResultsHeader .logo img {
+  width: 100%;
+  display: block;
+}
+/* line 294, ../sass/style.scss */
+.searchResultsHeader input[type="text"] {
+  font-size: 15px;
+  width: 92.7%;
+  float: left;
+}
+/* line 299, ../sass/style.scss */
+.searchResultsHeader input[type="submit"], .searchResultsHeader input[type="button"] {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: 170%;
+  width: 40px;
+  height: 37px;
+  padding: 10px;
+  background: url("../images/search.png") no-repeat;
+  background-size: 20px;
+  background-position: 8px;
+  border: 1px solid #d7d7d7;
+  background-color: #d7d7d7;
+}
+/* line 310, ../sass/style.scss */
+.searchResultsHeader input[type="submit"]:hover, .searchResultsHeader input[type="button"]:hover {
+  background-color: #bbbbbb;
+}
+/* line 316, ../sass/style.scss */
+.searchResultsHeader #advancedSearchOption.newAdvancedSearchOption a {
+  margin-top: 10px;
+  color: #0033ae;
+  text-decoration: underline;
+  text-align: left;
+  font-size: 13px;
+}
+/* line 326, ../sass/style.scss */
+.searchResultsHeader nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 329, ../sass/style.scss */
+.searchResultsHeader nav ul li {
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+/* line 339, ../sass/style.scss */
+#advancedSearch.newAdvancedSearch .heading {
+  margin-left: 22px;
+}
+/* line 342, ../sass/style.scss */
+#advancedSearch.newAdvancedSearch .cancelFilter {
+  margin-left: 138px;
+}
+
+/* line 348, ../sass/style.scss */
+.grayLine {
+  background-color: #d7d7d7;
+  height: 1px;
+}
+
+/* line 354, ../sass/style.scss */
+.searchResults .resultCount {
+  color: #bbbbbb;
+}
+/* line 357, ../sass/style.scss */
+.searchResults .result {
+  padding-bottom: 20px;
+}
+/* line 359, ../sass/style.scss */
+.searchResults .result a.resultTitle {
+  margin: 0;
+  color: #0033ae;
+  text-decoration: none;
+  font-size: 20px;
+}
+/* line 364, ../sass/style.scss */
+.searchResults .result a.resultTitle:hover {
+  text-decoration: underline;
+}
+/* line 368, ../sass/style.scss */
+.searchResults .result a.resultLink {
+  margin: 0;
+  color: #2f6120;
+  text-decoration: none;
+  font-size: 15px;
+}
+/* line 374, ../sass/style.scss */
+.searchResults .result p {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+/* line 384, ../sass/style.scss */
+#help h3, #help h4, #help p {
+  margin: 0;
+  padding: 0;
+}
+/* line 388, ../sass/style.scss */
+#help h3 {
+  font-size: 20px;
+}
+/* line 391, ../sass/style.scss */
+#help h4 {
+  font-size: 18px;
+}
+/* line 394, ../sass/style.scss */
+#help p {
+  color: #797979;
+}
