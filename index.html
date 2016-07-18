@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./assets/stylesheets/ie.css" />
   <![endif]-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 
 <body>
@@ -24,7 +25,6 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="search.html">Search</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </nav>
@@ -34,30 +34,173 @@
         <img class="logo" src="images/logo.png" alt="The City Record Logo">
       </div><!--//.grid-100 -->
       <!-- ******** End of Header ******** -->
-      <!-- ******** Login Fields ******** -->
-      <div class="grid-30 hide-on-mobile">&nbsp;</div>
-      <div class="grid-40 mobile-grid-100 login">
-        <div class="grid-100 mobile-grid-100 username">
-          <label class="grid-25 mobile-grid-25">Username</label>
-          <input type="text" placeholder="" class="grid-75 mobile-grid-75">
+      <!-- ******** Search Field ******** -->
+      <div class="grid-20 hide-on-mobile">&nbsp;</div>
+      <div class="grid-60 mobile-grid-100">
+        <div class="grid-100 mobile-grid-100 search">
+          <input type="text" placeholder="SEARCH" class="grid-100 mobile-grid-100">
         </div>
-        <div class="grid-100 mobile-grid-100 password">
-          <label class="grid-25 mobile-grid-25">Password</label>
-          <input type="password" placeholder="" class="grid-75 mobile-grid-75">
+        <div class="grid-100 mobile-grid-100 submitSearch">
+          <input type="submit" value="Search" class="grid-100 mobile-grid-100">
         </div>
-        <div class="grid-100 mobile-grid-100 submitLogin">
-          <div class="grid-25 mobile-grid-25">&nbsp;</div>
-          <input type="submit" value="Login" class="grid-75 mobile-grid-75">
-          <div class="grid-25 mobile-grid-25">&nbsp;</div>
-          <span class="grid-75 mobile-grid-75 helperText"><i>Please login with the username and password <br>provided in the grant document. <br>If you need a username and password please email Jonathan Soffer for futher assistance (<a href="mailto:jonathan.soffer@nyu.edu?Subject=The%20City%20Record:%20Login%20Info" target="_top">jonathan.soffer@nyu.edu</a>).</i></span>
+      </div><!-- //search -->
+      <div class="grid-20 hide-on-mobile">&nbsp;</div>
+      <div id="advancedSearchOption" class="grid-100 mobile-grid-100">
+        <a href="#" target="">advanced search</a>
+      </div>
+      <!-- ******** End of Search Field ******** -->
+
+      <!-- ******** Advanced Search Field ******** -->
+      <div id="advancedSearch" class="grid-100 mobile-grid-100">
+        <p class="heading">Advanced Search Options</p>
+        <!-- By Date -->
+        <div class="dateSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">By Date</p>
           </div>
-        </div><!-- //login -->
-        <div class="grid-30 hide-on-mobile">&nbsp;</div>
-        <!-- ******** End of Login Fields ******** -->
+          <div class="grid-40 mobile-grid-90">
+            <div class="grid-100 mobie-grid-100">
+              <label for="from" class="grid-25 mobile-grid-25">From Date</label>
+              <input type="text" name="from" id="from" class="grid-75 mobile-grid-75 fromDate" placeholder="06/24/1873">
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;
+            <!-- <img src="images/calendar_icon.png" alt="Calendar Icon" class="calendarIcon"> -->
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="grid-30 hide-on-mobile">&nbsp;</div>
+          <div class="grid-40 mobile-grid-90">
+            <div class="grid-100 mobile-grid-100">
+              <label for="to" class="grid-25 mobile-grid-25">To Date</label>
+              <input type="text" name="to" id="to" class="grid-75 mobile-grid-75 toDate" placeholder="03/31/1876">
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;
+           <!--  <img src="images/calendar_icon.png" alt="Calendar Icon" class="calendarIcon"> -->
+          </div>
+
+        </div><!-- //.date -->
         <div class="clear"></div>
-          <!-- ******** End of Header and Nav ******** -->
-        </div><!--//.grid-container -->
-      </div><!-- //#wrapper -->
-      <script src="javascripts/jquery-2.1.3.min.js"></script>
-    </body>
-    </html>
+
+        <!-- By Agency -->
+        <div class="agencySearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">By Agency</p>
+          </div>
+          <div class="grid-40 mobile-grid-100">
+            <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <select id="agencyList" class="grid-75 mobile-grid-75"></select>
+              <span class="smallText"><i>press ctrl/cmd to select more than one item</i></span>
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        </div><!-- //.agency -->
+        <div class="clear"></div>
+
+        <!-- Borough -->
+        <!-- <div class="boroughSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">Borough</p>
+          </div>
+          <div class="grid-40 mobile-grid-100 checkboxes"> -->
+            <!-- Manhattan -->
+            <!-- <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Manhattan">
+              <label>Manhattan</label>
+            </div> -->
+            <!-- Brooklyn -->
+           <!--  <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Brooklyn">
+              <label>Brooklyn</label>
+            </div> -->
+            <!-- Queens -->
+           <!--  <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Queens">
+              <label>Queens</label>
+            </div> -->
+            <!-- Bronx -->
+          <!--   <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Bronx">
+              <label>Bronx</label>
+            </div> -->
+            <!-- Staten Island -->
+            <!-- <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="checkbox" value="Staten Island">
+              <label>Staten Island</label>
+            </div>
+          </div> -->
+          <!-- //.checkboxes -->
+         <!--  <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        </div> -->
+        <!-- //.borough -->
+        <!-- <div class="clear"></div> -->
+
+        <!-- Location Keywords -->
+        <div class="locationKeywordsSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">Location Keywords</p>
+          </div>
+          <div class="grid-40 mobile-grid-100">
+            <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="text" placeholder="ex: Waverly Place" class="grid-75 mobile-grid-75 locationKeywords">
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        </div><!-- //.date -->
+        <div class="clear"></div>
+
+        <!-- Zip Code -->
+<!--         <div class="zipCodeSearch">
+          <div class="grid-30 mobile-grid-100">
+            <div class="grid-50 hide-on-mobile">&nbsp;</div>
+            <p class="grid-50 mobile-grid-100 inputType">Zip Code</p>
+          </div>
+          <div class="grid-40 mobile-grid-100">
+            <div class="grid-100 mobile-grid-100">
+              <div class="grid-25 mobile-grid-25">&nbsp;</div>
+              <input type="text" class="grid-75 mobile-grid-75 zipCode">
+            </div>
+          </div>
+          <div class="grid-30 hide-on-mobile">&nbsp;</div>
+        </div> -->
+        <!-- //.date -->
+        <!-- <div class="clear"></div> -->
+
+        <div class="grid-70 hide-on-mobile">&nbsp;</div>
+        <div class="grid-30 mobile-grid-100">
+          <input type="button" value="Cancel" id="cancelButton" class="grid-50 mobile-grid-50 cancelFilter" style="float: left;">
+         <input type="submit" value="Apply" class="grid-50 mobile-grid-50 applyFilter">
+       </div>
+
+     </div><!-- //#advancedSearch -->
+
+     <!-- ******** End of Advanced Search Field ******** -->
+
+     <!-- TEMP ACCESS TO SEARCH RESULTS PAGE -->
+     <div class="clear"></div>
+     <a href="searchResults.html" style="float: right;  margin-top: 5px; margin-bottom: 20px; font-size: 10px;">Temp Link to Search Results Page</a>
+     <!-- END TEMP ACCESS TO SEARCH RESULTS PAGE -->
+
+
+
+   </div><!--//.grid-container -->
+ </div><!-- //#wrapper -->
+ <script src="javascripts/jquery-2.1.3.min.js"></script>
+  <script src="javascripts/external/jquery/jquery.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
+  <script src="javascripts/advancedSearch.js"></script>
+</body>
+</html>

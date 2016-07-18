@@ -187,18 +187,20 @@ div.header img.logo {
   text-align: center;
 }
 
-/* line 174, ../sass/style.scss */
-.aboutSection {
-  margin-top: 50px;
+/* line 175, ../sass/style.scss */
+.aboutSection img {
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .search {
   margin-top: 40px;
   margin-bottom: 30px;
 }
 
-/* line 185, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 #advancedSearchOption a {
   text-align: center;
   margin-top: 20px;
@@ -206,95 +208,95 @@ div.header img.logo {
   display: block;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 #advancedSearch, #newAdvancedSearch {
   background-color: #f1f1f1;
   border: 1px solid #797979;
   padding: 20px;
   display: none;
 }
-/* line 198, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 #advancedSearch .agencySearch, #advancedSearch .boroughSearch, #advancedSearch .locationKeywordsSearch, #advancedSearch .zipCodeSearch, #newAdvancedSearch .agencySearch, #newAdvancedSearch .boroughSearch, #newAdvancedSearch .locationKeywordsSearch, #newAdvancedSearch .zipCodeSearch {
   margin-top: 20px;
 }
-/* line 201, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 #advancedSearch .heading, #newAdvancedSearch .heading {
   font-family: "proxima_novasemibold", sans-serif;
   margin-top: 0;
   font-size: 20px;
 }
-/* line 206, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 #advancedSearch .inputType, #newAdvancedSearch .inputType {
   font-size: 18px;
   text-align: left;
   padding: 0;
   margin: 10px 0 0 0;
 }
-/* line 212, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 #advancedSearch label, #newAdvancedSearch label {
   float: left;
 }
-/* line 215, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #advancedSearch input[type="text"], #newAdvancedSearch input[type="text"] {
   margin-bottom: 20px;
 }
-/* line 218, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 #advancedSearch .smallText, #newAdvancedSearch .smallText {
   font-size: 14px;
 }
-/* line 222, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #advancedSearch .dateSearch .calendarIcon, #newAdvancedSearch .dateSearch .calendarIcon {
   width: 35px;
   margin-top: 2px;
 }
-/* line 233, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 #advancedSearch .boroughSearch .checkboxes, #newAdvancedSearch .boroughSearch .checkboxes {
   margin-top: 12px;
 }
-/* line 236, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 #advancedSearch .boroughSearch label, #newAdvancedSearch .boroughSearch label {
   display: block;
   line-height: normal;
   margin-bottom: 5px;
 }
-/* line 241, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 #advancedSearch .boroughSearch input[type="checkbox"], #newAdvancedSearch .boroughSearch input[type="checkbox"] {
   display: block;
   float: left;
   margin-top: 3px;
   margin-right: 10px;
 }
-/* line 248, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 #advancedSearch .applyFilter, #newAdvancedSearch .applyFilter {
   float: right;
 }
-/* line 251, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 #advancedSearch .cancelFilter, #newAdvancedSearch .cancelFilter {
   margin-left: 60px;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 #ui-datepicker-div {
   width: 312px;
 }
 
-/* line 262, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 #dialog {
   font-family: 'proxima_nova_rgregular', sans-serif;
 }
-/* line 264, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 #dialog iframe {
   width: 100%;
   min-height: 625px;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .ui-widget-overlay {
   background: #797979 !important;
   opacity: 0.3 !important;
 }
 
-/* line 274, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 .ui-dialog {
   height: 92% !important;
   width: 95% !important;
@@ -302,29 +304,29 @@ div.header img.logo {
   left: 35px !important;
 }
 
-/* line 282, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .searchResultsHeader {
   margin-top: 40px;
   margin-bottom: 5px;
   padding-bottom: 20px;
 }
-/* line 286, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .searchResultsHeader .logo {
   margin-top: 4px;
   margin-left: 20px;
 }
-/* line 289, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .searchResultsHeader .logo img {
   width: 100%;
   display: block;
 }
-/* line 294, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .searchResultsHeader input[type="text"] {
   font-size: 15px;
   width: 92.7%;
   float: left;
 }
-/* line 299, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .searchResultsHeader input[type="submit"], .searchResultsHeader input[type="button"] {
   text-indent: 100%;
   white-space: nowrap;
@@ -339,11 +341,11 @@ div.header img.logo {
   border: 1px solid #d7d7d7;
   background-color: #d7d7d7;
 }
-/* line 310, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .searchResultsHeader input[type="submit"]:hover, .searchResultsHeader input[type="button"]:hover {
   background-color: #bbbbbb;
 }
-/* line 316, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .searchResultsHeader #advancedSearchOption.newAdvancedSearchOption a {
   margin-top: 10px;
   color: #0033ae;
@@ -351,78 +353,78 @@ div.header img.logo {
   text-align: left;
   font-size: 13px;
 }
-/* line 326, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 .searchResultsHeader nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 329, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .searchResultsHeader nav ul li {
   padding: 0 10px;
   margin-top: 10px;
 }
 
-/* line 339, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 #advancedSearch.newAdvancedSearch .heading {
   margin-left: 22px;
 }
-/* line 342, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 #advancedSearch.newAdvancedSearch .cancelFilter {
   margin-left: 138px;
 }
 
-/* line 348, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .grayLine {
   background-color: #d7d7d7;
   height: 1px;
 }
 
-/* line 354, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .searchResults .resultCount {
   color: #bbbbbb;
 }
-/* line 357, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .searchResults .result {
   padding-bottom: 20px;
 }
-/* line 359, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .searchResults .result a.resultTitle {
   margin: 0;
   color: #0033ae;
   text-decoration: none;
   font-size: 20px;
 }
-/* line 364, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .searchResults .result a.resultTitle:hover {
   text-decoration: underline;
 }
-/* line 368, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .searchResults .result a.resultLink {
   margin: 0;
   color: #2f6120;
   text-decoration: none;
   font-size: 15px;
 }
-/* line 374, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .searchResults .result p {
   margin-top: 2px;
   font-size: 13px;
 }
 
-/* line 384, ../sass/style.scss */
+/* line 388, ../sass/style.scss */
 #help h3, #help h4, #help p {
   margin: 0;
   padding: 0;
 }
-/* line 388, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 #help h3 {
   font-size: 20px;
 }
-/* line 391, ../sass/style.scss */
+/* line 395, ../sass/style.scss */
 #help h4 {
   font-size: 18px;
 }
-/* line 394, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 #help p {
   color: #797979;
 }
